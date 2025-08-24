@@ -1,0 +1,134 @@
+﻿/* Reset & Base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: #2c3e50;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+        padding: 0.4rem 0.8rem;
+        border-radius: 5px;
+    }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+/* Login & Register Buttons */
+.btn-login {
+    background: #3498db;
+}
+
+.btn-register {
+    background: #27ae60;
+}
+
+.btn-login:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+.btn-register:hover {
+    background: #1e8449;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background-image:url('bgLand.png');
+    color: #fff;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: #f39c12;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+    .btn:hover {
+        background: #d35400;
+    }
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: #ecf0f1;
+}
+
+.feature {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+    .feature h2 {
+        margin-bottom: 1rem;
+    }
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}

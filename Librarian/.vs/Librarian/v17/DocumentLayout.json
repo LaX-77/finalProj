@@ -1,0 +1,433 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|c:\\users\\moila\\videos\\vs2022projects\\grklib\\librarian\\landingpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:landingpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\confirmselectionpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:confirmselectionpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\loginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:loginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\resetpasswordpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:resetpasswordpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\forgotpasspage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:forgotpasspage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\settingspage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:settingspage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\settingspage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:settingspage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\landingpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:landingpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\settingspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:settingspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\registerpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:registerpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\registerpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:registerpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\resetpasswordpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:resetpasswordpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\studentpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:studentpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\adminpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\confirmselectionpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:confirmselectionpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\confirmselectionpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:confirmselectionpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\studentpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:studentpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LandingPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LandingPage.aspx",
+              "RelativeDocumentMoniker": "LandingPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LandingPage.aspx",
+              "RelativeToolTip": "LandingPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-23T20:56:01.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfirmSelectionPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.aspx",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.aspx",
+              "RelativeToolTip": "ConfirmSelectionPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T01:08:33.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.aspx",
+              "RelativeDocumentMoniker": "AdminPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.aspx",
+              "RelativeToolTip": "AdminPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T00:21:15.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.aspx",
+              "RelativeDocumentMoniker": "StudentPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.aspx",
+              "RelativeToolTip": "StudentPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T01:15:37.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LoginPage.aspx.cs",
+              "RelativeDocumentMoniker": "LoginPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LoginPage.aspx.cs",
+              "RelativeToolTip": "LoginPage.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAewBYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:09:17.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LoginPage.aspx",
+              "RelativeDocumentMoniker": "LoginPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LoginPage.aspx",
+              "RelativeToolTip": "LoginPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-24T07:07:59.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPasswordPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ResetPasswordPage.aspx",
+              "RelativeDocumentMoniker": "ResetPasswordPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ResetPasswordPage.aspx",
+              "RelativeToolTip": "ResetPasswordPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-23T20:14:00.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ForgotPassPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ForgotPassPage.aspx",
+              "RelativeDocumentMoniker": "ForgotPassPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ForgotPassPage.aspx",
+              "RelativeToolTip": "ForgotPassPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-24T07:17:09.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SettingsPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.aspx",
+              "RelativeDocumentMoniker": "SettingsPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.aspx",
+              "RelativeToolTip": "SettingsPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T01:20:36.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingsPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.css",
+              "RelativeDocumentMoniker": "SettingsPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.css",
+              "RelativeToolTip": "SettingsPage.css",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAowH4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T01:51:57.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LandingPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LandingPage.css",
+              "RelativeDocumentMoniker": "LandingPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\LandingPage.css",
+              "RelativeToolTip": "LandingPage.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-24T07:24:27.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SettingsPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.aspx.cs",
+              "RelativeDocumentMoniker": "SettingsPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\SettingsPage.aspx.cs",
+              "RelativeToolTip": "SettingsPage.aspx.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA2wBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:54:44.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\RegisterPage.aspx",
+              "RelativeDocumentMoniker": "RegisterPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\RegisterPage.aspx",
+              "RelativeToolTip": "RegisterPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-24T07:13:21.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\RegisterPage.aspx.cs",
+              "RelativeDocumentMoniker": "RegisterPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\RegisterPage.aspx.cs",
+              "RelativeToolTip": "RegisterPage.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:14:34.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ForgotPassPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ForgotPassPage.aspx.cs",
+              "RelativeDocumentMoniker": "ForgotPassPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ForgotPassPage.aspx.cs",
+              "RelativeToolTip": "ForgotPassPage.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAewBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:17:19.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ResetPasswordPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ResetPasswordPage.aspx.cs",
+              "RelativeDocumentMoniker": "ResetPasswordPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ResetPasswordPage.aspx.cs",
+              "RelativeToolTip": "ResetPasswordPage.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAewBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:00:45.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "librarianPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.aspx",
+              "RelativeDocumentMoniker": "librarianPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.aspx",
+              "RelativeToolTip": "librarianPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-21T23:27:59.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "librarianPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.css",
+              "RelativeDocumentMoniker": "librarianPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.css",
+              "RelativeToolTip": "librarianPage.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-21T23:29:11.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StudentPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.css",
+              "RelativeDocumentMoniker": "StudentPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.css",
+              "RelativeToolTip": "StudentPage.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T01:49:00.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.css",
+              "RelativeDocumentMoniker": "AdminPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.css",
+              "RelativeToolTip": "AdminPage.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T00:21:53.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ConfirmSelectionPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.aspx.cs",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.aspx.cs",
+              "RelativeToolTip": "ConfirmSelectionPage.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIA2wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:26:34.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ConfirmSelectionPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.css",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.css",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\ConfirmSelectionPage.css",
+              "RelativeToolTip": "ConfirmSelectionPage.css",
+              "ViewState": "AgIAACoAAAAAAAAAAAAiwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T01:12:57.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StudentPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.aspx.cs",
+              "RelativeDocumentMoniker": "StudentPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\StudentPage.aspx.cs",
+              "RelativeToolTip": "StudentPage.aspx.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAWwBIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:21:19.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "librarianPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.aspx.cs",
+              "RelativeDocumentMoniker": "librarianPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\librarianPage.aspx.cs",
+              "RelativeToolTip": "librarianPage.aspx.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAD4vysAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T23:31:50.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdminPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.aspx.cs",
+              "RelativeDocumentMoniker": "AdminPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Videos\\vs2022Projects\\grkLib\\Librarian\\AdminPage.aspx.cs",
+              "RelativeToolTip": "AdminPage.aspx.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAIAwwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:33:29.221Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
