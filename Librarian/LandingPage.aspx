@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Library Management System</title>
+    <title>Bokamoso Connect Library Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="LandingPage.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Navigation -->
+        <!-- Nav -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">📚 Library System</div>
@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <!-- Features -->
+        
         <section class="features">
             <div class="feature">
                 <h2>📖 Explore Catalog</h2>
@@ -88,7 +88,7 @@
         </section>
 
         <!-- Add Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
         <style>
             .social-links {
                 display: flex;

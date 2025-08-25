@@ -18,14 +18,80 @@
                 </nav>
                 <h1>Bokamoso Library Management System</h1>
                 <p>&nbsp;</p>
-                    <h2>Search Books</h2>
-                    <asp:TextBox ID="txtSearch" runat="server" CssClass="search-input" placeholder="Search by title, author, or ISBN..." AutoPostBack="true" OnTextChanged="txtSearch_TextChanged" />
+                <asp:TextBox ID="txtSearch" runat="server" CssClass="search-input"
+                    AutoPostBack="true" OnTextChanged="txtSearch_TextChanged"
+                    placeholder="Search by title, author, or ISBN..." />
             </header>
             <main>
-                <section class="search-section">
-                    <asp:ListBox ID="lstBooks" runat="server" CssClass="book-list" SelectionMode="Multiple" />
-                    <asp:Button ID="btnAddToSelection" runat="server" Text="Add to Selection" CssClass="btn-add" OnClick="btnAddToSelection_Click" />
-                </section>
+                
+                    <section class="search-section">
+                    
+                        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                
+                                <asp:HiddenField ID="hdnSearchTriggered" runat="server" />
+
+                                <asp:Label ID="lblHeadings" runat="server"></asp:Label>
+                                <br />
+                                <asp:ListBox ID="lstShow" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="Large" Width="775px"></asp:ListBox>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+
+                        <script type="text/javascript">
+                            let debounceTimer;
+
+                            function triggerSearchDebounced() {
+                                clearTimeout(debounceTimer);
+                                debounceTimer = setTimeout(function () {
+                                    // ✅ Mark that search triggered the postback
+                                    document.getElementById('<%= hdnSearchTriggered.ClientID %>').value = 'true';
+                                    __doPostBack('<%= txtSearch.UniqueID %>', '');
+                                }, 400);
+                             }
+
+                            function setupSearchDebounce() {
+                                const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+                                if (!searchBox) return;
+
+                                searchBox.addEventListener('keyup', function () {
+                                    triggerSearchDebounced();
+                                });
+                            }
+
+                            function restoreSearchFocusIfNeeded() {
+                                const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+                                const hiddenField = document.getElementById('<%= hdnSearchTriggered.ClientID %>');
+
+                                if (hiddenField && hiddenField.value === 'true') {
+                                    hiddenField.value = ''; // Reset flag
+                                    if (searchBox) {
+                                        searchBox.focus();
+                                        const val = searchBox.value;
+                                        searchBox.value = '';
+                                        searchBox.value = val;
+                                    }
+                                }
+                            }
+
+                            if (typeof window.searchDebounceInitialized === 'undefined') {
+                                window.searchDebounceInitialized = true;
+                                setupSearchDebounce();
+                            }
+
+                            window.onload = function () {
+                                restoreSearchFocusIfNeeded();
+                            };
+                        </script>
+
+
+                        <br />
+                        
+                    </section>
+
+                <asp:Button ID="btnAddToSelection" runat="server" Text="Add to Selection" CssClass="btn-add" OnClick="btnAddToSelection_Click" />
+                
                 <section class="selected-books">
                     <h2>Selected Books</h2>
                     <asp:ListBox ID="lstSelectedBooks" runat="server" CssClass="selected-list" />

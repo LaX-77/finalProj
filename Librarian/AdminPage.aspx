@@ -24,43 +24,51 @@
             <main>
                 <section class="manage-section">
                     <h2>Admin Dashboard</h2>
+                    <p>&nbsp;</p>
                     <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false" />
                     
                     <div class="form-group">
-                        <h3>Add New Librarian</h3>
-                        <asp:TextBox ID="txtLibrarianId" runat="server" CssClass="input-field" placeholder="Enter Librarian ID" />
-                        <asp:TextBox ID="txtLibrarianEmail" runat="server" CssClass="input-field" placeholder="Email" />
+                        <h2>Add New Librarian</h2>
                         <asp:TextBox ID="txtLibrarianFirstName" runat="server" CssClass="input-field" placeholder="First Name" />
                         <asp:TextBox ID="txtLibrarianLastName" runat="server" CssClass="input-field" placeholder="Last Name" />
+                        <asp:TextBox ID="txtLibrarianEmail" runat="server" CssClass="input-field" placeholder="Email" />
                         <asp:TextBox ID="txtLibrarianPassword" runat="server" TextMode="Password" CssClass="input-field" placeholder="Password" />
                         <asp:Button ID="btnAddLibrarian" runat="server" Text="Add Librarian" CssClass="btn-action" OnClick="btnAddLibrarian_Click" />
                     </div>
                     
                     <div class="form-group">
-                        <h3>Remove Librarian or User</h3>
-                        <asp:DropDownList ID="ddlRemoveType" runat="server" CssClass="type-dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlRemoveType_SelectedIndexChanged">
-                            <asp:ListItem Value="Librarian" Text="Librarian" />
-                            <asp:ListItem Value="Student" Text="Student" />
-                        </asp:DropDownList>
+                        <h2>Remove Librarian or User</h2>
+                        <asp:TextBox ID="txtUserIdDel" runat="server" Width="1174px"></asp:TextBox>
+                        <br />
+                        <br />
                         <asp:ListBox ID="lstUsers" runat="server" CssClass="user-list" SelectionMode="Single" />
+                        <br />
+                        <br />
                         <asp:Button ID="btnRemoveUser" runat="server" Text="Remove Selected" CssClass="btn-delete" OnClick="btnRemoveUser_Click" OnClientClick="return confirm('Are you sure you want to remove this user? This cannot be undone.');" />
                     </div>
                     
                     <div class="form-group">
-                        <h3>Update Librarian or User</h3>
-                        <asp:DropDownList ID="ddlUpdateType" runat="server" CssClass="type-dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlUpdateType_SelectedIndexChanged">
-                            <asp:ListItem Value="Librarian" Text="Librarian" />
-                            <asp:ListItem Value="Student" Text="Student" />
-                        </asp:DropDownList>
-                        <asp:DropDownList ID="ddlUsers" runat="server" CssClass="user-dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlUsers_SelectedIndexChanged" />
-                        <asp:TextBox ID="txtUpdateEmail" runat="server" CssClass="input-field" placeholder="Email" />
-                        <asp:TextBox ID="txtUpdateFirstName" runat="server" CssClass="input-field" placeholder="First Name" />
-                        <asp:TextBox ID="txtUpdateLastName" runat="server" CssClass="input-field" placeholder="Last Name" />
-                        <asp:Button ID="btnUpdateUser" runat="server" Text="Update Details" CssClass="btn-action" OnClick="btnUpdateUser_Click" />
+                        <h2>&nbsp;</h2>
+                        <h2>Update Librarian or User</h2>
+                        <asp:TextBox ID="txtUserID" runat="server" Width="1179px"></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:RadioButton ID="radEmail" runat="server" GroupName="TargetField" Text="Email" />
+&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radLast" runat="server" GroupName="TargetField" Text="Last Name" />
+&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radFirst" runat="server" GroupName="TargetField" Text="First Name" />
+&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radPass" runat="server" GroupName="TargetField" Text="Password" />
+                        <br />
+                        <br />
+                        <asp:TextBox ID="txtUpdate" runat="server" CssClass="input-field" placeholder="Enter new Email/Name/Password" />
+                        <asp:Button ID="btnUpdateUser" runat="server" Text="Update Details" CssClass="btn-action" OnClick="btnUpdateUser_Click" Width="267px" />
+                        <br />
                     </div>
                     
                     <div class="form-group">
-                        <h3>View All Users</h3>
+                        <h2>View All Users</h2>
                         <asp:TextBox ID="txtSearchUsers" runat="server" CssClass="input-field" placeholder="Search by name or ID..." AutoPostBack="true" OnTextChanged="txtSearchUsers_TextChanged" />
                         <asp:DropDownList ID="ddlSortUsers" runat="server" CssClass="sort-dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlSortUsers_SelectedIndexChanged">
                             <asp:ListItem Value="Name ASC" Text="Sort by Name (A-Z)" />

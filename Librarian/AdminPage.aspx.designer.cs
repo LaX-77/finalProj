@@ -60,24 +60,6 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
-        /// txtLibrarianId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLibrarianId;
-
-        /// <summary>
-        /// txtLibrarianEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLibrarianEmail;
-
-        /// <summary>
         /// txtLibrarianFirstName control.
         /// </summary>
         /// <remarks>
@@ -94,6 +76,15 @@ namespace Librarian
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLibrarianLastName;
+
+        /// <summary>
+        /// txtLibrarianEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLibrarianEmail;
 
         /// <summary>
         /// txtLibrarianPassword control.
@@ -114,13 +105,13 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnAddLibrarian;
 
         /// <summary>
-        /// ddlRemoveType control.
+        /// txtUserIdDel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRemoveType;
+        protected global::System.Web.UI.WebControls.TextBox txtUserIdDel;
 
         /// <summary>
         /// lstUsers control.
@@ -141,49 +132,49 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnRemoveUser;
 
         /// <summary>
-        /// ddlUpdateType control.
+        /// txtUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUpdateType;
+        protected global::System.Web.UI.WebControls.TextBox txtUserID;
 
         /// <summary>
-        /// ddlUsers control.
+        /// radEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUsers;
+        protected global::System.Web.UI.WebControls.RadioButton radEmail;
 
         /// <summary>
-        /// txtUpdateEmail control.
+        /// radLast control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdateEmail;
+        protected global::System.Web.UI.WebControls.RadioButton radLast;
 
         /// <summary>
-        /// txtUpdateFirstName control.
+        /// radPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdateFirstName;
+        protected global::System.Web.UI.WebControls.RadioButton radPass;
 
         /// <summary>
-        /// txtUpdateLastName control.
+        /// txtUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUpdateLastName;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdate;
 
         /// <summary>
         /// btnUpdateUser control.
