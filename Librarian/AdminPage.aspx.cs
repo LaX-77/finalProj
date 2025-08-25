@@ -221,9 +221,73 @@ namespace Librarian
 
         }
 
-        protected void ddlUpdateType_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnUpdateUser_Click(object sender, EventArgs e)
         {
-
+            string userId = txtUserID.Text.Trim();
+            string newValue = txtUpdate.Text.Trim();
+        
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(newValue))
+            {
+                lblMessage.Text = "User ID and new value cannot be empty.";
+                lblMessage.Visible = true;
+                return;
+            }
+        
+            string columnToUpdate = "";
+        
+            if (radFirst.Checked)
+                columnToUpdate = "UserName";
+            else if (radLast.Checked)
+                columnToUpdate = "UserSurname";
+            else if (radEmail.Checked)
+                columnToUpdate = "UserMail";
+            else if (radPass.Checked)
+                columnToUpdate = "UserPasswd";
+            else
+            {
+                lblMessage.Text = "Please select a field to update.";
+                lblMessage.Visible = true;
+                return;
+            }
+        
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
+        
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = $"UPDATE Users SET {columnToUpdate} = @newValue WHERE Id = @userId";
+        
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@newValue", newValue);
+                    cmd.Parameters.AddWithValue("@userId", userId);
+        
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+        
+                        if (rowsAffected > 0)
+                        {
+                            lblMessage.Text = "User details updated successfully!";
+                            lblMessage.CssClass = "message success";
+                        }
+                        else
+                        {
+                            lblMessage.Text = "No user found with the specified ID.";
+                            lblMessage.CssClass = "message error";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        lblMessage.Text = "Error: " + ex.Message;
+                        lblMessage.CssClass = "message error";
+                    }
+                    finally
+                    {
+                        lblMessage.Visible = true;
+                    }
+                }
+            }
         }
 
         protected void ddlUsers_SelectedIndexChanged(object sender, EventArgs e)
