@@ -16,13 +16,198 @@ namespace Librarian
 
         }
 
-        protected void btnAddLibrarian_Click(object sender, EventArgs e)
+        
+        string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:|DataDirectoty|\bookDB.mdf;Integrated Security=True";
+        SqlConnection conn;
+        SqlDataAdapter adapter;
+        DataSet ds;
+        SqlCommand cmd;
+        private void loadData()
         {
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                adapter = new SqlDataAdapter();
+                ds = new DataSet();
+                string sql = "SELECT * FROM tblUsers";
+                cmd = new SqlCommand(sql, conn);
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds, "tblUsers");
+                lstUsers.DataSource = ds;
+                //lstUsers.DataBind;
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
 
         }
 
+        protected void btnAddLibrarian_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal fees = 0;
+                String role = "Librarian";
+
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
+                cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@UserName", txtLibrarianFirstName.Text);
+                cmd.Parameters.AddWithValue("@UserSurname", txtLibrarianLastName.Text);
+                cmd.Parameters.AddWithValue("@UserMail", txtLibrarianEmail.Text);
+                cmd.Parameters.AddWithValue("@UserPasswd", txtLibrarianPassword.Text);
+                cmd.Parameters.AddWithValue("@UserRole", role);
+                cmd.Parameters.AddWithValue("@OutstandingFees", fees);
+
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                lblMessage.Text = "Added at row: " + rowsAffected;
+                
+
+                conn.Close();
+                loadData();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+           
+        }
+    
+
         protected void btnRemoveUser_Click(object sender, EventArgs e)
         {
+           
+            conn = new SqlConnection(constr);
+            
+            try
+            {
+
+                conn.Open();
+                string sql = "DELETE FROM Vehicles WHERE UserID = @UserID";
+                SqlCommand comm = new SqlCommand(sql, conn);
+                //comm.Parameters.AddWithValue("@UserID", txtLibrarianId.Text);
+                int result = comm.ExecuteNonQuery();
+
+                if (result > 0)
+                {
+                    lblMessage.Text ="User deleted successfully.";
+                    conn.Close();
+                }
+                else
+                {
+                    lblMessage.Text = "Select user to Delete";
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+
+        }
+
+        
+
+        string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:|DataDirectoty|\bookDB.mdf;Integrated Security=True";
+        SqlConnection conn;
+        SqlDataAdapter adapter;
+        DataSet ds;
+        SqlCommand cmd;
+        private void loadData()
+        {
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+                adapter = new SqlDataAdapter();
+                ds = new DataSet();
+                string sql = "SELECT * FROM tblUsers";
+                cmd = new SqlCommand(sql, conn);
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds, "tblUsers");
+                lstUsers.DataSource = ds;
+                //lstUsers.DataBind;
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+
+        }
+
+        protected void btnAddLibrarian_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal fees = 0;
+                String role = "Librarian";
+
+                conn = new SqlConnection(constr);
+                conn.Open();
+                string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
+                cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@UserName", txtLibrarianFirstName.Text);
+                cmd.Parameters.AddWithValue("@UserSurname", txtLibrarianLastName.Text);
+                cmd.Parameters.AddWithValue("@UserMail", txtLibrarianEmail.Text);
+                cmd.Parameters.AddWithValue("@UserPasswd", txtLibrarianPassword.Text);
+                cmd.Parameters.AddWithValue("@UserRole", role);
+                cmd.Parameters.AddWithValue("@OutstandingFees", fees);
+
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                lblMessage.Text = "Added at row: " + rowsAffected;
+                
+
+                conn.Close();
+                loadData();
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+           
+        }
+    
+
+        protected void btnRemoveUser_Click(object sender, EventArgs e)
+        {
+           
+            conn = new SqlConnection(constr);
+            
+            try
+            {
+
+                conn.Open();
+                string sql = "DELETE FROM Vehicles WHERE UserID = @UserID";
+                SqlCommand comm = new SqlCommand(sql, conn);
+                //comm.Parameters.AddWithValue("@UserID", txtLibrarianId.Text);
+                int result = comm.ExecuteNonQuery();
+
+                if (result > 0)
+                {
+                    lblMessage.Text ="User deleted successfully.";
+                    conn.Close();
+                }
+                else
+                {
+                    lblMessage.Text = "Select user to Delete";
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
 
         }
 
