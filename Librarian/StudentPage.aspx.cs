@@ -24,7 +24,7 @@ namespace Librarian
 
         protected void btnConfirmSelections_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ConfirmSelectionPage.aspx");
+          
         }
 
         protected void btnAddToSelection_Click(object sender, EventArgs e)
