@@ -29,8 +29,12 @@ namespace Librarian
 
         protected void btnAddToSelection_Click(object sender, EventArgs e)
         {
-            
-
+            foreach (ListItem item in lstBooks.Items)
+             {
+         if (item.Selected && lstSelectedBooks.Items.FindByValue(item.Value) == null)
+         {
+             lstSelectedBooks.Items.Add(new ListItem(item.Text, item.Value));
+         }
 
         }
 
