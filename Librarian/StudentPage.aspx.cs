@@ -29,13 +29,15 @@ namespace Librarian
 
         protected void btnAddToSelection_Click(object sender, EventArgs e)
         {
-            foreach (ListItem item in lstBooks.Items)
-             {
-         if (item.Selected && lstSelectedBooks.Items.FindByValue(item.Value) == null)
-         {
-             lstSelectedBooks.Items.Add(new ListItem(item.Text, item.Value));
-         }
-
+           // Loop through the items in the search results (lstShow)
+           foreach (ListItem item in lstShow.Items)
+            {
+              // If the item is selected and not already in lstSelectedBooks, add it
+             if (item.Selected && lstSelectedBooks.Items.FindByValue(item.Value) == null)
+                 {
+                    lstSelectedBooks.Items.Add(new ListItem(item.Text, item.Value));
+                }
+            }
         }
 
         public DataTable SearchBooks(string query)
