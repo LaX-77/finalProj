@@ -78,48 +78,12 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.HiddenField hdnSearchTriggered;
 
         /// <summary>
-        /// lblHeadings control.
+        /// gvBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHeadings;
-
-        /// <summary>
-        /// lstShow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstShow;
-
-        /// <summary>
-        /// btnAddToSelection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddToSelection;
-
-        /// <summary>
-        /// lstSelectedBooks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstSelectedBooks;
-
-        /// <summary>
-        /// btnConfirmSelections control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmSelections;
+        protected global::System.Web.UI.WebControls.GridView gvBooks;
     }
 }

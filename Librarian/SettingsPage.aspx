@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SettingsPage.aspx.cs" Inherits="Librarian.SettingsPage" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SettingsPage.aspx.cs" Inherits="Librarian.SettingsPage" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,27 +32,38 @@
                     </div>
                     
                     <div class="form-group">
-                        <h3>Delete Account</h3>
+                        <h3Delete Account</h3>
                         <asp:Button ID="btnDeleteAccount" runat="server" Text="Delete My Account" CssClass="btn-delete" OnClick="btnDeleteAccount_Click" OnClientClick="return confirm('Are you sure you want to delete your account? This cannot be undone.');" />
                     </div>
                     
                     <div class="form-group">
                         <h3>Outstanding Fees</h3>
-                        <asp:GridView ID="gvFees" runat="server" CssClass="fees-table" AutoGenerateColumns="False">
-                            <Columns>
-                                <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" DataFormatString="{0:yyyy-MM-dd}" />
-                                <asp:BoundField DataField="ReturnDate" HeaderText="Return Date" DataFormatString="{0:yyyy-MM-dd}"/>
-                                <asp:BoundField DataField="Amount" HeaderText="Amount" DataFormatString="{0:C}" />
-                                <asp:BoundField DataField="Status" HeaderText="Status" />
-                            </Columns>
+                        <p>
+                            <asp:Label ID="lblFees" runat="server"></asp:Label>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p><h2View borrowed books</h2>
+                        <asp:GridView ID="gvBorrowed" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
+                        </p>
                     </div>
                 </section>
             </main>
         </div>
     </form>
     <footer>
-    <p>&copy; 2025 Library Management System. All Rights Reserved.</p>
+    <p>&copy; 2025 Library Management System. All Rights Reserved...</p>
     </footer>
 </body>
 

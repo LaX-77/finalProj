@@ -95,9 +95,10 @@ main {
     margin-right: 10px;
 }
 
-    .btn-action:hover, .btn-delete:hover {
+.btn-action:hover, .btn-delete:hover {
         background-color: #2980b9;
-    }
+
+}
 
 .btn-delete {
     background-color: #e74c3c;
@@ -111,18 +112,17 @@ main {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+
 }
 
     .books-table th, .books-table td {
         border: 1px solid #ccc;
         padding: 8px;
         text-align: left;
+       
     }
 
-    .books-table th {
-        background-color: #f2f2f2;
-    }
-
+        
 .message {
     color: green;
     font-weight: bold;

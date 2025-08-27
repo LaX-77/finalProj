@@ -9,14 +9,17 @@ namespace Librarian
 {
     public partial class ConfirmSelectionPage : System.Web.UI.Page
     {
+        private string userId;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnRemoveSelected_Click(object sender, EventArgs e)
-        {
-
+            if (Session["UserID"] != null)
+            {
+                userId = Session["UserID"].ToString();
+            }
+            else
+            {
+                return;
+            }
         }
 
         protected void btnFinalConfirm_Click(object sender, EventArgs e)

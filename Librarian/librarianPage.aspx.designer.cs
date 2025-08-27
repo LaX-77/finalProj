@@ -60,6 +60,33 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.DropDownList ddlSort;
 
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+
+        /// <summary>
+        /// hdnSearchTriggered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnSearchTriggered;
+
+        /// <summary>
         /// gvBooks control.
         /// </summary>
         /// <remarks>
@@ -168,24 +195,6 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnConfirmCollection;
 
         /// <summary>
-        /// gvCollectionBooks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCollectionBooks;
-
-        /// <summary>
-        /// txtReturnCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReturnCode;
-
-        /// <summary>
         /// btnConfirmReturn control.
         /// </summary>
         /// <remarks>
@@ -195,12 +204,12 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnConfirmReturn;
 
         /// <summary>
-        /// gvReturnBooks control.
+        /// gvCollectionBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvReturnBooks;
+        protected global::System.Web.UI.WebControls.GridView gvCollectionBooks;
     }
 }

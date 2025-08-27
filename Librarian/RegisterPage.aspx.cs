@@ -57,13 +57,14 @@ namespace Librarian
 
                     // Check if email already exists
                     string checkQuery = "SELECT COUNT(*) FROM tblUsers WHERE UserMail = @UserMail";
-                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
                     {
                         checkCmd.Parameters.Add("@UserMail", SqlDbType.NVarChar, 30).Value = email;
                         int count = (int)checkCmd.ExecuteScalar();
                         if (count > 0)
                         {
                             ShowMessage("Email already registered.", false);
+                            conn.Close();
                             return;
                         }
                     }
@@ -75,10 +76,10 @@ namespace Librarian
 
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
                     {
-                        insertCmd.Parameters.Add("@UserName", SqlDbType.NVarChar, 30).Value = name;
-                        insertCmd.Parameters.Add("@UserSurname", SqlDbType.NVarChar, 30).Value = surname;
-                        insertCmd.Parameters.Add("@UserMail", SqlDbType.NVarChar, 30).Value = email;
-                        insertCmd.Parameters.Add("@UserPasswd", SqlDbType.NVarChar, 100).Value = BCrypt.Net.BCrypt.HashPassword(password);
+                        insertCmd.Parameters.AddWithValue("@UserName", name);
+                        insertCmd.Parameters.AddWithValue("@UserSurname", (surname));
+                        insertCmd.Parameters.AddWithValue("@UserMail", (email));
+                        insertCmd.Parameters.AddWithValue("@UserPasswd", (BCrypt.Net.BCrypt.HashPassword(password)));
 
                         int newUserId = (int)insertCmd.ExecuteScalar();
                         if (newUserId > 0)

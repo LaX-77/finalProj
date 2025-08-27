@@ -19,10 +19,17 @@
             <main>
                 <section class="confirm-section">
                     <h2>Confirm Your Book Selections</h2>
-                    <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false" />
-                    <asp:ListBox ID="lstSelectedBooks" runat="server" CssClass="selected-list" SelectionMode="Multiple" />
-                    <asp:Button ID="btnRemoveSelected" runat="server" Text="Remove Selected" CssClass="btn-remove" OnClick="btnRemoveSelected_Click" />
+                    <asp:Label ID="lblSelectedBooks" runat="server" Text="Selected Books:" AssociatedControlID="lstSelectedBooks"></asp:Label>
+                    <br />
+                    <asp:ListBox ID="lstSelectedBooks" runat="server" CssClass="selected-list" SelectionMode="Multiple"></asp:ListBox>
+                    <br />
+                    <asp:Label ID="lblCollectionDate" runat="server" Text="Choose Date of Collection:" AssociatedControlID="Calendar1"></asp:Label>
+                    <br />
+                    <asp:Calendar ID="Calendar1" runat="server" CssClass="calendar"></asp:Calendar>
+                    <br />
                     <asp:Button ID="btnFinalConfirm" runat="server" Text="Final Confirm" CssClass="btn-confirm" OnClick="btnFinalConfirm_Click" />
+                    <br />
+                    <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false" />
                 </section>
             </main>
         </div>

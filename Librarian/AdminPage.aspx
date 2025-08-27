@@ -5,6 +5,14 @@
 <head runat="server">
     <title>Bokamoso LMS - Admin Dashboard</title>
     <link rel="stylesheet" href="AdminPage.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 185px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,14 +33,54 @@
                 <section class="manage-section">
                     <h2>Admin Dashboard</h2>
                     <p>&nbsp;</p>
-                    <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false" />
+                    <asp:Label ID="lblMessage" runat="server" CssClass="message" />
                     
                     <div class="form-group">
                         <h2>Add New Librarian</h2>
-                        <asp:TextBox ID="txtLibrarianFirstName" runat="server" CssClass="input-field" placeholder="First Name" />
-                        <asp:TextBox ID="txtLibrarianLastName" runat="server" CssClass="input-field" placeholder="Last Name" />
-                        <asp:TextBox ID="txtLibrarianEmail" runat="server" CssClass="input-field" placeholder="Email" />
-                        <asp:TextBox ID="txtLibrarianPassword" runat="server" TextMode="Password" CssClass="input-field" placeholder="Password" />
+                        <p>&nbsp;</p>
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style2">
+                        <asp:TextBox ID="txtLibrarianFirstName" runat="server" CssClass="input-field" placeholder="First Name" Width="806px" />
+                                </td>
+                                <td>
+                                    &nbsp;
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLibrarianFirstName" ErrorMessage=" First Name Required!!!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style2">
+                        <asp:TextBox ID="txtLibrarianLastName" runat="server" CssClass="input-field" placeholder="Last Name" Width="804px" />
+                                </td>
+                                <td>
+                                    &nbsp;
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLibrarianLastName" ErrorMessage="Last Name Required!!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style2">
+                        <asp:TextBox ID="txtLibrarianEmail" runat="server" CssClass="input-field" placeholder="Email" Width="803px" />
+                                    <br />
+                                </td>
+                                <td>
+                                    &nbsp;
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtLibrarianEmail" ErrorMessage="Email Required!!" Font-Bold="True" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style2">
+                        <asp:TextBox ID="txtLibrarianPassword" runat="server" TextMode="Password" CssClass="input-field" placeholder="Password" Width="802px" />
+                                </td>
+                                <td>
+                                    &nbsp;
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtLibrarianPassword" ErrorMessage="PassWord Required!!!" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <asp:Button ID="btnAddLibrarian" runat="server" Text="Add Librarian" CssClass="btn-action" OnClick="btnAddLibrarian_Click" />
                     </div>
                     
@@ -41,7 +89,18 @@
                         <asp:TextBox ID="txtUserIdDel" runat="server" Width="1174px"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:ListBox ID="lstUsers" runat="server" CssClass="user-list" SelectionMode="Single" />
+                        <asp:GridView ID="GridView3" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Width="1112px">
+                            <AlternatingRowStyle BackColor="#DCDCDC" />
+                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                            <SortedDescendingHeaderStyle BackColor="#000065" />
+                        </asp:GridView>
                         <br />
                         <br />
                         <asp:Button ID="btnRemoveUser" runat="server" Text="Remove Selected" CssClass="btn-delete" OnClick="btnRemoveUser_Click" OnClientClick="return confirm('Are you sure you want to remove this user? This cannot be undone.');" />
@@ -50,20 +109,35 @@
                     <div class="form-group">
                         <h2>&nbsp;</h2>
                         <h2>Update Librarian or User</h2>
-                        <asp:TextBox ID="txtUserID" runat="server" Width="1179px"></asp:TextBox>
+                        <p>&nbsp;</p>
+                        <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Width="1112px">
+                            <AlternatingRowStyle BackColor="#DCDCDC" />
+                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                            <SortedDescendingHeaderStyle BackColor="#000065" />
+                        </asp:GridView>
                         <br />
                         <br />
-                        <asp:RadioButton ID="radEmail" runat="server" GroupName="TargetField" Text="Email" />
-&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="radLast" runat="server" GroupName="TargetField" Text="Last Name" />
-&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="radFirst" runat="server" GroupName="TargetField" Text="First Name" />
-&nbsp;&nbsp;&nbsp;
-                        <asp:RadioButton ID="radPass" runat="server" GroupName="TargetField" Text="Password" />
+                        <asp:RadioButton ID="radEmail" runat="server" GroupName="Chosen" Text="Email" />
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radLast" runat="server" GroupName="Chosen" Text="Last Name"  />
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radPass" runat="server" GroupName="Chosen" Text="Password" />
+                        <br />
+                        <br />
+                        <asp:TextBox ID="txtUserID" runat="server" CssClass="input-field" placeholder="Enter ID to change"/>
                         <br />
                         <br />
                         <asp:TextBox ID="txtUpdate" runat="server" CssClass="input-field" placeholder="Enter new Email/Name/Password" />
-                        <asp:Button ID="btnUpdateUser" runat="server" Text="Update Details" CssClass="btn-action" OnClick="btnUpdateUser_Click" Width="267px" />
+                        &nbsp;
+                        <asp:Button ID="bntUpdateUser" runat="server" BackColor="#3366FF" Height="54px" OnClick="bntUpdateUser_Click" Text="Update Info" Width="241px" />
+                        <asp:Label ID="Label1" runat="server" ForeColor="Red" />
                         <br />
                     </div>
                     

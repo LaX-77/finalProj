@@ -69,6 +69,15 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtLibrarianFirstName;
 
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// txtLibrarianLastName control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace Librarian
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLibrarianLastName;
+
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
         /// txtLibrarianEmail control.
@@ -87,6 +105,15 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtLibrarianEmail;
 
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
         /// txtLibrarianPassword control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace Librarian
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLibrarianPassword;
+
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
         /// btnAddLibrarian control.
@@ -114,13 +150,13 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtUserIdDel;
 
         /// <summary>
-        /// lstUsers control.
+        /// GridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstUsers;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
 
         /// <summary>
         /// btnRemoveUser control.
@@ -132,13 +168,13 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnRemoveUser;
 
         /// <summary>
-        /// txtUserID control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserID;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
 
         /// <summary>
         /// radEmail control.
@@ -168,6 +204,15 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.RadioButton radPass;
 
         /// <summary>
+        /// txtUserID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUserID;
+
+        /// <summary>
         /// txtUpdate control.
         /// </summary>
         /// <remarks>
@@ -177,13 +222,22 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtUpdate;
 
         /// <summary>
-        /// btnUpdateUser control.
+        /// bntUpdateUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateUser;
+        protected global::System.Web.UI.WebControls.Button bntUpdateUser;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// txtSearchUsers control.

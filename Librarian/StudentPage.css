@@ -54,12 +54,15 @@ main {
 }
 
 .search-input {
-    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 10px;
+}
+
+.books-table td, .books-table th {
+    text-align: left;
 }
 
 .book-list, .selected-list {
@@ -70,7 +73,7 @@ main {
     padding: 10px;
 }
 
-.btn-add, .btn-confirm {
+.btn-add, .btn-confirm, .btn-remove{
     background-color: #3498db;
     color: white;
     padding: 10px 20px;
@@ -80,6 +83,11 @@ main {
     margin-top: 10px;
 }
 
-    .btn-add:hover, .btn-confirm:hover {
-        background-color: #2980b9;
-    }
+.btn-remove{
+    background-color: #a60505;
+}
+
+.btn-add:hover, .btn-confirm:hover {
+    background-color: #2980b9;
+}
+

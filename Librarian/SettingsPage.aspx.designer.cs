@@ -69,12 +69,21 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnDeleteAccount;
 
         /// <summary>
-        /// gvFees control.
+        /// lblFees control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvFees;
+        protected global::System.Web.UI.WebControls.Label lblFees;
+
+        /// <summary>
+        /// gvBorrowed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvBorrowed;
     }
 }
