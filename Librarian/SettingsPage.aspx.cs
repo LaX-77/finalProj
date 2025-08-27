@@ -11,7 +11,28 @@ namespace Librarian
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //display data
+            
+            string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionStringName"].ConnectionString;
 
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT IssueDate, ReturnDate, Amount, Status FROM tblBorrow WHERE UserID = @UserID";
+        
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    // Replace with the actual user ID from session or authentication
+                    cmd.Parameters.AddWithValue("@UserID", Session["UserID"]); 
+        
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        gvFees.DataSource = dt;
+                        gvFees.DataBind();
+                    }
+                }
+            }
         }
 
         protected void btnUpdateEmail_Click(object sender, EventArgs e)
