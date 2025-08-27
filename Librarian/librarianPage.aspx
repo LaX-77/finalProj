@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="librarianPage.aspx.cs" Inherits="Librarian.librarianPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="librarianPage.aspx.cs" Inherits="Librarian.librarianPage" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,13 +35,98 @@
                             <asp:ListItem Value="Author ASC" Text="Sort by Author (A-Z)" />
                             <asp:ListItem Value="Author DESC" Text="Sort by Author (Z-A)" />
                         </asp:DropDownList>
-                        <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" AutoGenerateColumns="False">
-                            <Columns>
-                                <asp:BoundField DataField="Title" HeaderText="Title" />
-                                <asp:BoundField DataField="Author" HeaderText="Author" />
-                                <asp:BoundField DataField="ISBN" HeaderText="ISBN" />
-                            </Columns>
-                        </asp:GridView>
+                        
+
+                        <section class="search-section">
+
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            
+            <asp:HiddenField ID="hdnSearchTriggered" runat="server" />
+
+            
+            <br />
+            <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvBooks_SelectedIndexChanged">
+                <Columns>
+                    <asp:TemplateField HeaderText="Select">
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chkSelect" runat="server" />
+                        </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Center" />
+                        <HeaderStyle HorizontalAlign="Center" />
+                </asp:TemplateField>
+                    
+            </Columns>
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            </asp:GridView>   
+            
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+    <script type="text/javascript">
+        let debounceTimer;
+
+        function triggerSearchDebounced() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(function () {
+                // ✅ Mark that search triggered the postback
+                document.getElementById('<%= hdnSearchTriggered.ClientID %>').value = 'true';
+                __doPostBack('<%= txtSearch.UniqueID %>', '');
+            }, 400);
+         }
+
+        function setupSearchDebounce() {
+            const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+            if (!searchBox) return;
+
+            searchBox.addEventListener('keyup', function () {
+                triggerSearchDebounced();
+            });
+        }
+
+        function restoreSearchFocusIfNeeded() {
+            const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+            const hiddenField = document.getElementById('<%= hdnSearchTriggered.ClientID %>');
+
+            if (hiddenField && hiddenField.value === 'true') {
+                hiddenField.value = ''; // Reset flag
+                if (searchBox) {
+                    searchBox.focus();
+                    const val = searchBox.value;
+                    searchBox.value = '';
+                    searchBox.value = val;
+                }
+            }
+        }
+
+        if (typeof window.searchDebounceInitialized === 'undefined') {
+            window.searchDebounceInitialized = true;
+            setupSearchDebounce();
+        }
+
+        window.onload = function () {
+            restoreSearchFocusIfNeeded();
+        };
+    </script>
+
+
+    <br />
+    
+</section>
+
+
                     <p>&nbsp;</p>
                     <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false" />
                     
@@ -53,20 +138,25 @@
                         
                         <asp:TextBox ID="txtYear" runat="server" CssClass="input-field" placeholder="Year"/>
                         <asp:Textbox ID="txtEdition" runat="server" CssClass="input-field" placeholder="Edition"/>
+                        &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnAddBook" runat="server" Text="Add Book" CssClass="btn-action" OnClick="btnAddBook_Click" />
                     </div>
                     
                     <div class="form-group">
                         <h3>Remove Book</h3>
                         <asp:ListBox ID="lstBooks" runat="server" CssClass="book-list" SelectionMode="Single" />
+                        &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnRemoveBook" runat="server" Text="Remove Selected Book" CssClass="btn-delete" OnClick="btnRemoveBook_Click" OnClientClick="return confirm('Are you sure you want to remove this book?');" />
                         <br />
                     </div>
                     
                     <div class="form-group">
-                        <h3>Confirm Book Collection</h3>
+                        <h3>Confirm Book Status</h3>
                         <asp:TextBox ID="txtCollectionCode" runat="server" CssClass="input-field" placeholder="Enter Collection Code" />
+                        &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnConfirmCollection" runat="server" Text="Confirm Collection" CssClass="btn-action" OnClick="btnConfirmCollection_Click" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnConfirmReturn" runat="server" Text="Confirm Return" CssClass="btn-action" OnClick="btnConfirmReturn_Click" />
                         <asp:GridView ID="gvCollectionBooks" runat="server" CssClass="books-table" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField DataField="Title" HeaderText="Title" />
@@ -76,21 +166,6 @@
                         </asp:GridView>
                     </div>
                     
-                    <div class="form-group">
-                        <h3>Confirm Book Return</h3>
-                        <asp:TextBox ID="txtReturnCode" runat="server" CssClass="input-field" placeholder="Enter Collection Code" />
-                        <asp:Button ID="btnConfirmReturn" runat="server" Text="Confirm Return" CssClass="btn-action" OnClick="btnConfirmReturn_Click" />
-                        <asp:GridView ID="gvReturnBooks" runat="server" CssClass="books-table" AutoGenerateColumns="False">
-                            <Columns>
-                                <asp:BoundField DataField="Title" HeaderText="Title" />
-                                <asp:BoundField DataField="Author" HeaderText="Author" />
-                                <asp:BoundField DataField="ISBN" HeaderText="ISBN" />
-                            </Columns>
-                        </asp:GridView>
-                    </div>
-                    
-                    <div class="form-group">
-                    </div>
                 </section>
             </main>
         </div>
