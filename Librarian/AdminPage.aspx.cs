@@ -213,7 +213,43 @@ namespace Librarian
 
         protected void btnUpdateUser_Click(object sender, EventArgs e)
         {
+            if (ddlUsers.SelectedValue == "")
+            {
+                lblMessage.Text = "Select a user to update.";
+                lblMessage.Visible = true;
+                return;
+            }
 
+            try
+            {
+                conn = new SqlConnection(constr);
+                conn.Open();
+
+                string sql = "UPDATE tblUsers SET UserName=@UserName, UserSurname=@UserSurname, UserMail=@UserMail " +
+                             "WHERE UserID=@UserID";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@UserID", ddlUsers.SelectedValue);
+                cmd.Parameters.AddWithValue("@UserName", txtUpdateFirstName.Text);
+                cmd.Parameters.AddWithValue("@UserSurname", txtUpdateLastName.Text);
+                cmd.Parameters.AddWithValue("@UserMail", txtUpdateEmail.Text);
+
+                int result = cmd.ExecuteNonQuery();
+
+                if (result > 0)
+                    lblMessage.Text = "User details updated successfully.";
+                else
+                    lblMessage.Text = "Update failed. Check User ID.";
+
+                lblMessage.Visible = true;
+                conn.Close();
+                loadData();
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+                lblMessage.Visible = true;
+            }
         }
 
         protected void ddlRemoveType_SelectedIndexChanged(object sender, EventArgs e)
