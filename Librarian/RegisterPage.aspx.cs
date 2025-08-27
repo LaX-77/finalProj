@@ -86,9 +86,10 @@ namespace Librarian
                         {
                             string emailError;
                             bool emailSent = SendRegistrationEmail(email, newUserId, out emailError);
+
                             ShowMessage($"Registration successful! Your User ID is: {newUserId}" +
-                                        (emailSent ? ". A confirmation email has been sent. Please check your inbox or spam folder." :
-                                                     $". Could not send confirmation email: {emailError}. Please note your User ID and contact support if needed."), emailSent);
+                                       (emailSent ? ". Confirmation email has been sent to your email address." :
+                                       $". Note: Could not send email ({emailError}). Please note your User ID for login."), true);
                             ClearForm();
                         }
                         else
@@ -124,49 +125,53 @@ namespace Librarian
             errorMessage = string.Empty;
             try
             {
-                System.Diagnostics.Debug.WriteLine($"Attempting to send email to: {email}");
-                string smtpUser = System.Configuration.ConfigurationManager.AppSettings["SmtpUser"];
-                string smtpPass = System.Configuration.ConfigurationManager.AppSettings["SmtpPass"];
-                if (string.IsNullOrEmpty(smtpUser) || string.IsNullOrEmpty(smtpPass))
+                using (MailMessage mail = new MailMessage())
                 {
-                    errorMessage = "SMTP configuration missing in Web.config";
-                    System.Diagnostics.Debug.WriteLine(errorMessage);
-                    return false;
-                }
-
-                using (SmtpClient client = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new System.Net.NetworkCredential(smtpUser, smtpPass)
-                })
-                {
-                    MailMessage mail = new MailMessage
-                    {
-                        From = new MailAddress(smtpUser, "Library System"),
-                        Subject = "Registration Successful",
-                        Body = $"Your registration is complete! Your User ID is: {userId}\n\nPlease use this User ID to log in at ~/LoginPage.aspx.\n\nBest regards,\nLibrary System",
-                        IsBodyHtml = false
-                    };
+                    mail.From = new MailAddress("bokamosoconnectlms@gmail.com", "Bokamoso Library System");
                     mail.To.Add(email);
-                    client.Send(mail);
-                    System.Diagnostics.Debug.WriteLine("Email sent successfully to: " + email);
+                    mail.Subject = "Registration Successful - Your Library Account";
+                    mail.Body = $@"Dear Library User,
+
+Your registration with Bokamoso Library System was successful!
+
+📚 Your User ID: {userId}
+📧 Your Email: {email}
+
+Please use your User ID and password to log in to your account.
+
+Best regards,
+Bokamoso Library Team
+";
+                    mail.IsBodyHtml = false;
+
+                    // Direct SMTP configuration (more reliable than Web.config)
+                    using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        client.EnableSsl = true;
+                        client.UseDefaultCredentials = false;
+                        client.Credentials = new System.Net.NetworkCredential(
+                            "bokamosoconnectlms@gmail.com",
+                            "xbawfjqgxhvcvgad"  // APP PASSWORD WITHOUT SPACES
+                        );
+                        client.Timeout = 15000;
+
+                        client.Send(mail);
+                    }
+
+                    System.Diagnostics.Debug.WriteLine($"Email sent successfully to: {email}");
                     return true;
                 }
             }
-            catch (SmtpException ex)
+            catch (SmtpException smtpEx)
             {
-                errorMessage = $"SMTP error: {ex.Message} (Status: {ex.StatusCode})";
-                System.Diagnostics.Debug.WriteLine($"{errorMessage}\nInnerException: {ex.InnerException?.Message}");
+                errorMessage = $"Email Error: {smtpEx.Message}";
+                System.Diagnostics.Debug.WriteLine($"SMTP Error: {smtpEx.StatusCode} - {smtpEx.Message}");
                 return false;
             }
             catch (Exception ex)
             {
-                errorMessage = $"General error: {ex.Message}";
-                System.Diagnostics.Debug.WriteLine($"{errorMessage}\nStackTrace: {ex.StackTrace}");
+                errorMessage = $"Error: {ex.Message}";
+                System.Diagnostics.Debug.WriteLine($"General Error: {ex.Message}");
                 return false;
             }
         }
