@@ -47,7 +47,7 @@
 
             
             <br />
-            <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvBooks_SelectedIndexChanged">
+            <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <Columns>
                     <asp:TemplateField HeaderText="Select">
                         <ItemTemplate>
@@ -85,7 +85,7 @@
                 document.getElementById('<%= hdnSearchTriggered.ClientID %>').value = 'true';
                 __doPostBack('<%= txtSearch.UniqueID %>', '');
             }, 400);
-         }
+        }
 
         function setupSearchDebounce() {
             const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
@@ -132,20 +132,42 @@
                     
                     <div class="form-group">
                         <h3>Add New Book</h3>
-                        <asp:TextBox ID="txtISBN" runat="server" CssClass="input-field" placeholder="ISBN" />
-                        <asp:TextBox ID="txtTitle" runat="server" CssClass="input-field" placeholder="Book Title" />
-                        <asp:TextBox ID="txtAuthor" runat="server" CssClass="input-field" placeholder="Author" />
+                        <asp:TextBox ID="txtISBN" runat="server" CssClass="input-field" placeholder="ISBN" Width="532px" />
+                        <br />
+                        <asp:TextBox ID="txtTitle" runat="server" CssClass="input-field" placeholder="Book Title" Width="530px" />
+                        <br />
+                        <asp:TextBox ID="txtAuthor" runat="server" CssClass="input-field" placeholder="Author" Width="531px" />
                         
-                        <asp:TextBox ID="txtYear" runat="server" CssClass="input-field" placeholder="Year"/>
-                        <asp:Textbox ID="txtEdition" runat="server" CssClass="input-field" placeholder="Edition"/>
-                        &nbsp;&nbsp;&nbsp;
+                        <br />
+                        <asp:DropDownList ID="dropdownGenre" runat="server" Height="242px" Width="547px">
+                            <asp:ListItem>Please Select your prefered genre</asp:ListItem>
+                            <asp:ListItem>Academic and Reference</asp:ListItem>
+                            <asp:ListItem>Business and Economics</asp:ListItem>
+                            <asp:ListItem>Arts and Humanities</asp:ListItem>
+                            <asp:ListItem>Social Sciences</asp:ListItem>
+                            <asp:ListItem>Fiction and General Reading </asp:ListItem>
+                            <asp:ListItem>Science and Technology</asp:ListItem>
+                        </asp:DropDownList>
+                        <br />
+                        <br />
+                        
+                        <asp:TextBox ID="txtYear" runat="server" CssClass="input-field" placeholder="Year" OnTextChanged="txtYear_TextChanged" Width="523px"/>
+                        <br />
+                        <asp:Textbox ID="txtEdition" runat="server" CssClass="input-field" placeholder="Edition" Width="519px"/>
+                        &nbsp;&nbsp;<br />
+                        <asp:Textbox ID="txtAvailable" runat="server" CssClass="input-field" placeholder="Edition" Width="519px"/>
+                        <br />
+                        &nbsp;
+                        <br />
                         <asp:Button ID="btnAddBook" runat="server" Text="Add Book" CssClass="btn-action" OnClick="btnAddBook_Click" />
                     </div>
                     
                     <div class="form-group">
                         <h3>Remove Book</h3>
-                        <asp:ListBox ID="lstBooks" runat="server" CssClass="book-list" SelectionMode="Single" />
+                        <asp:TextBox ID="txtEnterISBN" runat="server" Height="33px" Width="299px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;
+                        <br />
+                        <br />
                         <asp:Button ID="btnRemoveBook" runat="server" Text="Remove Selected Book" CssClass="btn-delete" OnClick="btnRemoveBook_Click" OnClientClick="return confirm('Are you sure you want to remove this book?');" />
                         <br />
                     </div>
