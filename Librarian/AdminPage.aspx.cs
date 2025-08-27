@@ -50,11 +50,12 @@ namespace Librarian
             try
             {
                 decimal fees = 0;
-                String role = "Librarian";
+                string role = "Librarian";
 
                 conn = new SqlConnection(constr);
                 conn.Open();
-                string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
+                string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) " +
+                             "VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
                 cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@UserName", txtLibrarianFirstName.Text);
@@ -64,11 +65,9 @@ namespace Librarian
                 cmd.Parameters.AddWithValue("@UserRole", role);
                 cmd.Parameters.AddWithValue("@OutstandingFees", fees);
 
-
-
                 int rowsAffected = cmd.ExecuteNonQuery();
-                lblMessage.Text = "Added at row: " + rowsAffected;
-                
+                lblMessage.Text = "Librarian added successfully!";
+                lblMessage.Visible = true;
 
                 conn.Close();
                 loadData();
@@ -76,41 +75,48 @@ namespace Librarian
             catch (SqlException ex)
             {
                 lblMessage.Text = ex.Message;
+                lblMessage.Visible = true;
             }
-           
         }
     
 
         protected void btnRemoveUser_Click(object sender, EventArgs e)
         {
-           
-            conn = new SqlConnection(constr);
-            
+            if (lstUsers.SelectedValue == "")
+            {
+                lblMessage.Text = "Please select a user to delete.";
+                lblMessage.Visible = true;
+                return;
+            }
+
             try
             {
-
+                conn = new SqlConnection(constr);
                 conn.Open();
-                string sql = "DELETE FROM Vehicles WHERE UserID = @UserID";
+                string sql = "DELETE FROM tblUsers WHERE UserID = @UserID";
                 SqlCommand comm = new SqlCommand(sql, conn);
-                //comm.Parameters.AddWithValue("@UserID", txtLibrarianId.Text);
+                comm.Parameters.AddWithValue("@UserID", lstUsers.SelectedValue);
+
                 int result = comm.ExecuteNonQuery();
 
                 if (result > 0)
                 {
-                    lblMessage.Text ="User deleted successfully.";
-                    conn.Close();
+                    lblMessage.Text = "User deleted successfully.";
                 }
                 else
                 {
-                    lblMessage.Text = "Select user to Delete";
+                    lblMessage.Text = "No user found.";
                 }
 
+                lblMessage.Visible = true;
+                conn.Close();
+                loadData();
             }
             catch (SqlException ex)
             {
                 lblMessage.Text = ex.Message;
+                lblMessage.Visible = true;
             }
-
         }
 
         
