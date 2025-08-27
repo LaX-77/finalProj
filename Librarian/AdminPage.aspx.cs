@@ -401,7 +401,21 @@ namespace Librarian
 
         protected void ddlSortUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string sort = ddlSortUsers.SelectedValue;
+            conn = new SqlConnection(constr);
+            string sql = "SELECT * FROM tblUsers ORDER BY ";
 
+            if (sort.Contains("Name"))
+                sql += "UserName " + (sort.Contains("DESC") ? "DESC" : "ASC");
+            else
+                sql += "UserID " + (sort.Contains("DESC") ? "DESC" : "ASC");
+
+            SqlDataAdapter ad = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+
+            gvUsers.DataSource = dt;
+            gvUsers.DataBind();
         }
     }
 }
