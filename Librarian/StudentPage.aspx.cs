@@ -24,7 +24,73 @@ namespace Librarian
 
         protected void btnConfirmSelections_Click(object sender, EventArgs e)
         {
-          
+          lblError.Text = "";
+        if (lstSelectedBooks.Items.Count == 0)
+        {
+            lblError.Text = "No books selected. Please add books to your selection before confirming.";
+            return;
+        }
+        Session["SelectedBooks"] = lstSelectedBooks.Items.Cast<ListItem>().Select(item => item.Text).ToList();
+
+        if (calCollectDate.SelectedDate == DateTime.MinValue || calCollectDate.SelectedDate < DateTime.Today)
+        {
+            lblError.Text = "Please select a valid collection date (today or later).";
+            lblError.ForeColor = System.Drawing.Color.Red;
+            lblError.Visible = true;
+            return;
+        }
+
+        DateTime collectDT = calCollectDate.SelectedDate;
+        DateTime returnDT = collectDT.AddDays(8);
+        string[] arrBookIDs = new string[4];
+        int i = 0;
+        foreach (ListItem item in lstSelectedBooks.Items)
+        {
+            // Assuming the format is "123 - Book Title"
+            string[] parts = item.Text.Split('-');
+            if (parts.Length > 0)
+            {
+                arrBookIDs[i] = parts[0].Trim(); // Get the ID part and trim whitespace
+                i++;
+            }
+        }
+
+        string transactionCode = "KR"+collectDT.ToShortDateString()+userId;
+
+        conn = new SqlConnection(connectionString);
+
+        for (int j = 0; j < i; j++)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "INSERT INTO tblBorrowed (UserID, ISBN, BorrowDate, ReturnDate, Status, QRCode) VALUES(@id, @is, @b, @r, @st, @qr)";
+                string status = "Pending";
+                cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@id", Convert.ToInt64(userId));
+                cmd.Parameters.AddWithValue("@is", Convert.ToInt64(arrBookIDs[j]));
+                cmd.Parameters.AddWithValue("@b", collectDT);
+                cmd.Parameters.AddWithValue("@r", returnDT);
+                cmd.Parameters.AddWithValue("@st", status);
+                cmd.Parameters.AddWithValue("@qr", transactionCode);
+                
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                
+                
+            }
+            catch(SqlException ex)
+            {
+                lblError.Text = " Couldnt place booking for ISBN: " + arrBookIDs[j] + "\n"+ex.Message;
+                return;
+            }
+            
+        }
+        lblError.Text = "Collection QR CODE: " + transactionCode;
+        //Response.Redirect("ConfirmSelectionPage.aspx");
+
+
         }
 
         protected void btnAddToSelection_Click(object sender, EventArgs e)
