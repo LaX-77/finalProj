@@ -184,16 +184,39 @@ namespace Librarian
 
         }
 
-        protected void btnRemoveSelected_Click(object sender, EventArgs e)
-        {
-            // Remove selected items from ListBox (iterate backwards to avoid index issues)
-            for (int i = lstSelectedBooks.Items.Count - 1; i >= 0; i--)
-            {
-                if (lstSelectedBooks.Items[i].Selected)
+        protected void btnRemoveBook_Click(object sender, EventArgs e)
+          {
+            try
+          {
+            conn = new SqlConnection(con_string);
+            conn.Open();
+
+            string sql = "DELETE FROM tblBooks WHERE ISBN = @delISBN";
+            comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@delISBN", txtEnterISBN.Text.Trim());
+
+            int rows = comm.ExecuteNonQuery();
+
+            if (rows > 0)
+               {
+                 lblMessage.Text = "Book successfully deleted!";
+               }
+               else
                 {
-                    lstSelectedBooks.Items.RemoveAt(i);
+                    lblMessage.Text = "No book found with that ISBN.";
                 }
-            }
+
+                  lblMessage.Visible = true;
+
+                  conn.Close();
+
+                  Showtable(); // refresh grid
+                }
+                  catch (Exception ex)
+                {
+                  lblMessage.Text = "Error: " + ex.Message;
+                  lblMessage.Visible = true;
+              }
         }
         protected void btnConfirmSelections_Click(object sender, EventArgs e)
         {
