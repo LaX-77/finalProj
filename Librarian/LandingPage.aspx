@@ -74,7 +74,7 @@
                     <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://wa.me/yourphonenumber" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/+27727484332" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
