@@ -28,6 +28,7 @@ namespace Librarian
             {
                 lblMessage.Text = "❌ You are not logged in.";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
+                Response.Redirect("LoginPage.aspx");
                 return;
             }
 
