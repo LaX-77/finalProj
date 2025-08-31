@@ -78,10 +78,13 @@
                             </tr>
                         </table>
                         <br />
+                        <asp:RadioButton ID="radAdmin" runat="server" GroupName="radRole" Text="Admin" />
+&nbsp;&nbsp;&nbsp;
+                        <asp:RadioButton ID="radLib" runat="server" GroupName="radRole" Text="Librarian" />
                         <br />
                         <br />
                         <br />
-                        <asp:Button ID="btnAddLibrarian" runat="server" Text="Add Librarian" CssClass="btn-action" OnClick="btnAddLibrarian_Click" />
+                        <asp:Button ID="btnAddLibAdm" runat="server" Text="Add Librarian/Admin" CssClass="btn-action" OnClick="btnAddLibAdm_Click" />
                     </div>
                     
                     <div class="form-group">
@@ -136,7 +139,9 @@
                         <br />
                         <asp:TextBox ID="txtUpdate" runat="server" CssClass="input-field" placeholder="Enter new Email/Name/Password" />
                         &nbsp;
-                        <asp:Button ID="bntUpdateUser" runat="server" BackColor="#3366FF" Height="54px" OnClick="bntUpdateUser_Click" Text="Update Info" Width="241px" />
+                        <br />
+                        <asp:Button ID="btnUpdateUser" runat="server" BackColor="#3366FF" Height="54px" OnClick="btnUpdateUser_Click" AutoPostback="true" Text="Update Info" Width="241px" CssClass="btn-action" CausesValidation="false" />
+                        <br />
                         <asp:Label ID="Label1" runat="server" ForeColor="Red" />
                         <br />
                     </div>
@@ -150,18 +155,92 @@
                             <asp:ListItem Value="ID ASC" Text="Sort by ID (A-Z)" />
                             <asp:ListItem Value="ID DESC" Text="Sort by ID (Z-A)" />
                         </asp:DropDownList>
-                        <asp:GridView ID="gvUsers" runat="server" CssClass="users-table" AutoGenerateColumns="False">
-                            <Columns>
-                                <asp:BoundField DataField="Id" HeaderText="ID" />
-                                <asp:BoundField DataField="Name" HeaderText="Name" />
-                                <asp:BoundField DataField="Email" HeaderText="Email" />
-                                <asp:BoundField DataField="Type" HeaderText="Type" />
-                            </Columns>
-                        </asp:GridView>
+                        
+
+<asp:ScriptManager ID="ScriptManager1" runat="server" />
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+        
+        <asp:HiddenField ID="hdnSearchTriggered" runat="server" />
+
+        
+        <br />
+        <asp:GridView ID="gvUsers" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" Width="90%">
+        
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>      
+        
+
+    </ContentTemplate>
+</asp:UpdatePanel>
+            
+            
+            
+
+    <script type="text/javascript">
+        let debounceTimer;
+
+        function triggerSearchDebounced() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(function () {
+                // ✅ Mark that search triggered the postback
+                document.getElementById('<%= hdnSearchTriggered.ClientID %>').value = 'true';
+                __doPostBack('<%= txtSearchUsers.UniqueID %>', '');
+            }, 400);
+        }
+
+        function setupSearchDebounce() {
+            const searchBox = document.getElementById('<%= txtSearchUsers.ClientID %>');
+            if (!searchBox) return;
+
+            searchBox.addEventListener('keyup', function () {
+                triggerSearchDebounced();
+            });
+        }
+
+        function restoreSearchFocusIfNeeded() {
+            const searchBox = document.getElementById('<%= txtSearchUsers.ClientID %>');
+            const hiddenField = document.getElementById('<%= hdnSearchTriggered.ClientID %>');
+
+            if (hiddenField && hiddenField.value === 'true') {
+                hiddenField.value = ''; // Reset flag
+                if (searchBox) {
+                    searchBox.focus();
+                    const val = searchBox.value;
+                    searchBox.value = '';
+                    searchBox.value = val;
+                }
+            }
+        }
+
+        if (typeof window.searchDebounceInitialized === 'undefined') {
+            window.searchDebounceInitialized = true;
+            setupSearchDebounce();
+        }
+
+        window.onload = function () {
+            restoreSearchFocusIfNeeded();
+        };
+    </script>
                     </div>
                 </section>
             </main>
         </div>
     </form>
+
+     
 </body>
+        <footer>
+    <p>&copy; 2025 Bokamoso Library Management System. All Rights Reserved.</p>
+</footer>
 </html>

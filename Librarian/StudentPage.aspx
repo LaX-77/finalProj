@@ -78,7 +78,7 @@
                                     document.getElementById('<%= hdnSearchTriggered.ClientID %>').value = 'true';
                                     __doPostBack('<%= txtSearch.UniqueID %>', '');
                                 }, 400);
-                             }
+                            }
 
                             function setupSearchDebounce() {
                                 const searchBox = document.getElementById('<%= txtSearch.ClientID %>');
@@ -171,5 +171,9 @@
             </main>
         </div>
     </form>
+     
 </body>
+        <footer>
+    <p>&copy; 2025 Bokamoso Library Management System. All Rights Reserved.</p>
+</footer>
 </html>

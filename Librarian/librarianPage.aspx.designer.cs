@@ -132,6 +132,15 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtAuthor;
 
         /// <summary>
+        /// dropdownGenre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdownGenre;
+
+        /// <summary>
         /// txtYear control.
         /// </summary>
         /// <remarks>
@@ -150,6 +159,15 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.TextBox txtEdition;
 
         /// <summary>
+        /// txtAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAvailable;
+
+        /// <summary>
         /// btnAddBook control.
         /// </summary>
         /// <remarks>
@@ -159,13 +177,13 @@ namespace Librarian
         protected global::System.Web.UI.WebControls.Button btnAddBook;
 
         /// <summary>
-        /// lstBooks control.
+        /// txtEnterISBN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstBooks;
+        protected global::System.Web.UI.WebControls.TextBox txtEnterISBN;
 
         /// <summary>
         /// btnRemoveBook control.

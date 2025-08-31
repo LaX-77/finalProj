@@ -30,10 +30,12 @@
                 <section class="manage-section">
                     <h2>Librarian Dashboard</h2>
                         <asp:DropDownList ID="ddlSort" runat="server" CssClass="sort-dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlSort_SelectedIndexChanged">
-                            <asp:ListItem Value="Title ASC" Text="Sort by Title (A-Z)" />
-                            <asp:ListItem Value="Title DESC" Text="Sort by Title (Z-A)" />
-                            <asp:ListItem Value="Author ASC" Text="Sort by Author (A-Z)" />
-                            <asp:ListItem Value="Author DESC" Text="Sort by Author (Z-A)" />
+                            <asp:ListItem Value="BookTitle ASC" Text="Sort by Title (A-Z)" />
+                            <asp:ListItem Value="BookTitle DESC" Text="Sort by Title (Z-A)" />
+                            <asp:ListItem Value="BookAuthor ASC" Text="Sort by Author (A-Z)" />
+                            <asp:ListItem Value="BookAuthor DESC" Text="Sort by Author (Z-A)" />
+                            <asp:ListItem Value="BookGenre ASC">Sort by Genre (A-Z)</asp:ListItem>
+                            <asp:ListItem Value="BookGenre DESC">Sort by Genre (Z-A)</asp:ListItem>
                         </asp:DropDownList>
                         
 
@@ -47,7 +49,7 @@
 
             
             <br />
-            <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gvBooks" runat="server" CssClass="books-table" CellPadding="4" ForeColor="#333333" GridLines="None" AllowSorting="True">
                 <Columns>
                     <asp:TemplateField HeaderText="Select">
                         <ItemTemplate>
@@ -139,7 +141,7 @@
                         <asp:TextBox ID="txtAuthor" runat="server" CssClass="input-field" placeholder="Author" Width="531px" />
                         
                         <br />
-                        <asp:DropDownList ID="dropdownGenre" runat="server" Height="242px" Width="547px">
+                        <asp:DropDownList ID="dropdownGenre" runat="server" Height="198px" Width="546px">
                             <asp:ListItem>Please Select your prefered genre</asp:ListItem>
                             <asp:ListItem>Academic and Reference</asp:ListItem>
                             <asp:ListItem>Business and Economics</asp:ListItem>
@@ -150,12 +152,13 @@
                         </asp:DropDownList>
                         <br />
                         <br />
+                        <br />
                         
-                        <asp:TextBox ID="txtYear" runat="server" CssClass="input-field" placeholder="Year" OnTextChanged="txtYear_TextChanged" Width="523px"/>
+                        <asp:TextBox ID="txtYear" runat="server" CssClass="input-field" placeholder="Year" Width="523px"/>
                         <br />
                         <asp:Textbox ID="txtEdition" runat="server" CssClass="input-field" placeholder="Edition" Width="519px"/>
                         &nbsp;&nbsp;<br />
-                        <asp:Textbox ID="txtAvailable" runat="server" CssClass="input-field" placeholder="Edition" Width="519px"/>
+                        <asp:Textbox ID="txtAvailable" runat="server" CssClass="input-field" placeholder="Available copies..." Width="519px"/>
                         <br />
                         &nbsp;
                         <br />
@@ -192,5 +195,9 @@
             </main>
         </div>
     </form>
+     
 </body>
+<footer>
+  <p>&copy; 2025 Bokamoso Library Management System. All Rights Reserved.</p>
+</footer>
 </html>

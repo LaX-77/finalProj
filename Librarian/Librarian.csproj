@@ -90,7 +90,6 @@
       <DependentUpon>bookDB.mdf</DependentUpon>
     </Content>
     <Content Include="ConfirmSelectionPage.aspx" />
-    <Content Include="ConfirmSelectionPage.css" />
     <Content Include="bgLand.png" />
     <Content Include="ForgotPassPage.aspx" />
     <Content Include="LandingPage.aspx" />

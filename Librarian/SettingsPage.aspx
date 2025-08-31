@@ -62,11 +62,12 @@
             </main>
         </div>
     </form>
-    <footer>
-    <p>&copy; 2025 Library Management System. All Rights Reserved...</p>
-    </footer>
+              <footer>
+<p>&copy; 2025 Bokamoso Library Management System. All Rights Reserved...</p>
+</footer>
 </body>
 
     <!-- Footer -->
+    
 
 </html>

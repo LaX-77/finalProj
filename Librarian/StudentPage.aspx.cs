@@ -20,7 +20,7 @@ namespace Librarian
         private string userId;
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             if (Session["UserID"] != null)
             {
                 userId = Session["UserID"].ToString();
@@ -29,94 +29,11 @@ namespace Librarian
             {
                 return;
             }
-=======
-
-        }
-
-        protected void btnConfirmSelections_Click(object sender, EventArgs e)
-        {
-          lblError.Text = "";
-        if (lstSelectedBooks.Items.Count == 0)
-        {
-            lblError.Text = "No books selected. Please add books to your selection before confirming.";
-            return;
-        }
-        Session["SelectedBooks"] = lstSelectedBooks.Items.Cast<ListItem>().Select(item => item.Text).ToList();
-
-        if (calCollectDate.SelectedDate == DateTime.MinValue || calCollectDate.SelectedDate < DateTime.Today)
-        {
-            lblError.Text = "Please select a valid collection date (today or later).";
-            lblError.ForeColor = System.Drawing.Color.Red;
-            lblError.Visible = true;
-            return;
-        }
-
-        DateTime collectDT = calCollectDate.SelectedDate;
-        DateTime returnDT = collectDT.AddDays(8);
-        string[] arrBookIDs = new string[4];
-        int i = 0;
-        foreach (ListItem item in lstSelectedBooks.Items)
-        {
-            // Assuming the format is "123 - Book Title"
-            string[] parts = item.Text.Split('-');
-            if (parts.Length > 0)
-            {
-                arrBookIDs[i] = parts[0].Trim(); // Get the ID part and trim whitespace
-                i++;
-            }
-        }
-
-        string transactionCode = "KR"+collectDT.ToShortDateString()+userId;
-
-        conn = new SqlConnection(connectionString);
-
-        for (int j = 0; j < i; j++)
-        {
-            try
-            {
-                conn.Open();
-                string sql = "INSERT INTO tblBorrowed (UserID, ISBN, BorrowDate, ReturnDate, Status, QRCode) VALUES(@id, @is, @b, @r, @st, @qr)";
-                string status = "Pending";
-                cmd = new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue("@id", Convert.ToInt64(userId));
-                cmd.Parameters.AddWithValue("@is", Convert.ToInt64(arrBookIDs[j]));
-                cmd.Parameters.AddWithValue("@b", collectDT);
-                cmd.Parameters.AddWithValue("@r", returnDT);
-                cmd.Parameters.AddWithValue("@st", status);
-                cmd.Parameters.AddWithValue("@qr", transactionCode);
-                
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                
-                
-            }
-            catch(SqlException ex)
-            {
-                lblError.Text = " Couldnt place booking for ISBN: " + arrBookIDs[j] + "\n"+ex.Message;
-                return;
-            }
-            
-        }
-        lblError.Text = "Collection QR CODE: " + transactionCode;
-        //Response.Redirect("ConfirmSelectionPage.aspx");
 
 
         }
 
-        protected void btnAddToSelection_Click(object sender, EventArgs e)
-        {
-           // Loop through the items in the search results (lstShow)
-           foreach (ListItem item in lstShow.Items)
-            {
-              // If the item is selected and not already in lstSelectedBooks, add it
-             if (item.Selected && lstSelectedBooks.Items.FindByValue(item.Value) == null)
-                 {
-                    lstSelectedBooks.Items.Add(new ListItem(item.Text, item.Value));
-                }
-            }
->>>>>>> 6fcb2baea475353c5dfd531a6d745e39fd562f0e
-        }
+
 
         public DataTable SearchBooks(string query)
         {
@@ -137,11 +54,11 @@ namespace Librarian
                 conn.Close();
                 return dt;
             }
-            catch(SqlException)
+            catch (SqlException)
             {
                 return null;
             }
-  
+
 
         }
 
@@ -184,39 +101,16 @@ namespace Librarian
 
         }
 
-        protected void btnRemoveBook_Click(object sender, EventArgs e)
-          {
-            try
-          {
-            conn = new SqlConnection(con_string);
-            conn.Open();
-
-            string sql = "DELETE FROM tblBooks WHERE ISBN = @delISBN";
-            comm = new SqlCommand(sql, conn);
-            comm.Parameters.AddWithValue("@delISBN", txtEnterISBN.Text.Trim());
-
-            int rows = comm.ExecuteNonQuery();
-
-            if (rows > 0)
-               {
-                 lblMessage.Text = "Book successfully deleted!";
-               }
-               else
+        protected void btnRemoveSelected_Click(object sender, EventArgs e)
+        {
+            // Remove selected items from ListBox (iterate backwards to avoid index issues)
+            for (int i = lstSelectedBooks.Items.Count - 1; i >= 0; i--)
+            {
+                if (lstSelectedBooks.Items[i].Selected)
                 {
-                    lblMessage.Text = "No book found with that ISBN.";
+                    lstSelectedBooks.Items.RemoveAt(i);
                 }
-
-                  lblMessage.Visible = true;
-
-                  conn.Close();
-
-                  Showtable(); // refresh grid
-                }
-                  catch (Exception ex)
-                {
-                  lblMessage.Text = "Error: " + ex.Message;
-                  lblMessage.Visible = true;
-              }
+            }
         }
         protected void btnConfirmSelections_Click(object sender, EventArgs e)
         {
@@ -251,7 +145,7 @@ namespace Librarian
                 }
             }
 
-            string transactionCode = "KR"+collectDT.ToShortDateString()+userId;
+            string transactionCode = "BL" + collectDT.ToShortDateString() + userId;
 
             conn = new SqlConnection(connectionString);
 
@@ -264,27 +158,28 @@ namespace Librarian
                     string status = "Pending";
                     cmd = new SqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@id", Convert.ToInt64(userId));
-                    cmd.Parameters.AddWithValue("@is", Convert.ToInt64(arrBookIDs[j]));
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt64(userId.Trim()));
+                    cmd.Parameters.AddWithValue("@is", Convert.ToInt64(arrBookIDs[j].Trim()));
                     cmd.Parameters.AddWithValue("@b", collectDT);
                     cmd.Parameters.AddWithValue("@r", returnDT);
                     cmd.Parameters.AddWithValue("@st", status);
                     cmd.Parameters.AddWithValue("@qr", transactionCode);
-                    
+
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    
-                    
+
+
                 }
-                catch(SqlException ex)
+                catch (SqlException ex)
                 {
-                    lblError.Text = " Couldnt place booking for ISBN: " + arrBookIDs[j] + "\n"+ex.Message;
+                    lblError.Text = " Couldnt place booking for ISBN: " + arrBookIDs[j] + "\n" + ex.Message;
                     return;
                 }
-                
+
             }
+            
+            Response.Redirect("ConfirmSelectionPage.aspx");
             lblError.Text = "Collection QR CODE: " + transactionCode;
-            //Response.Redirect("ConfirmSelectionPage.aspx");
 
 
         }

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using BCrypt.Net;
 
 namespace Librarian
 {
@@ -23,13 +24,13 @@ namespace Librarian
         {
             if (!IsPostBack) // Only load full table once
             {
-                Showtable2();
+                Showtable("UserID ASC", gvUsers);
             }
 
 
         }
 
-        public void Showtable()
+        public void Showtable(string id)
         {
             try
             {
@@ -41,9 +42,10 @@ namespace Librarian
 
                 ds = new DataSet();
 
-                string sql = @"SELECT * FROM tblUsers";
+                string sql = @"SELECT * FROM tblUsers WHERE UserID=@id";
 
                 comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", Convert.ToInt64(id));
 
                 adap.SelectCommand = comm;
                 adap.Fill(ds);
@@ -59,7 +61,7 @@ namespace Librarian
             }
         }
 
-        public void Showtable2(string orderBy = "UserID ASC")
+        public void Showtable(string orderBy, GridView gv)
         {
             try
             {
@@ -76,8 +78,8 @@ namespace Librarian
                 adap.SelectCommand = comm;
                 adap.Fill(ds);
 
-                GridView2.DataSource = ds;
-                GridView2.DataBind();
+                gv.DataSource = ds;
+                gv.DataBind();
 
                 conn.Close();
             }
@@ -88,59 +90,69 @@ namespace Librarian
         }
 
 
-        protected void btnAddLibrarian_Click(object sender, EventArgs e)
+        protected void btnAddLibAdm_Click(object sender, EventArgs e)
         {
-            string role = "Librarian";
-            decimal fees = 0.0m;
-            try
+            string role;
+            if (radAdmin.Checked || radLib.Checked)
             {
-                conn = new SqlConnection(con_string);
-
-                conn.Open();
-
-                //string sql = $"INSERT INTO tblUsers(UserName,UserSurname,UserMail,UserPasswd,UserRole,OutstandingFees)Values('{txtLibrarianFirstName.Text}','{txtLibrarianLastName.Text}','{txtLibrarianEmail.Text}','{txtLibrarianPassword.Text}','{role}','{fees}')";
-                string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
-                comm = new SqlCommand(sql, conn);
-
-                comm.Parameters.AddWithValue("@UserName", txtLibrarianFirstName.Text);
-                comm.Parameters.AddWithValue("@UserSurname", txtLibrarianLastName.Text);
-                comm.Parameters.AddWithValue("@UserMail", txtLibrarianEmail.Text);
-                comm.Parameters.AddWithValue("@UserPasswd", txtLibrarianPassword.Text);
-                comm.Parameters.AddWithValue("@UserRole", role);
-                comm.Parameters.AddWithValue("@OutstandingFees", fees);
+                role = radLib.Checked ? radLib.Text : radAdmin.Text;
 
 
-                int rowsAffected = comm.ExecuteNonQuery();
-                lblMessage.Text = "Books added successfully!";
+                decimal fees = 0.0m;
+                try
+                {
+                    conn = new SqlConnection(con_string);
+
+                    conn.Open();
+
+                    //string sql = $"INSERT INTO tblUsers(UserName,UserSurname,UserMail,UserPasswd,UserRole,OutstandingFees)Values('{txtLibrarianFirstName.Text}','{txtLibrarianLastName.Text}','{txtLibrarianEmail.Text}','{txtLibrarianPassword.Text}','{role}','{fees}')";
+                    string sql = "INSERT INTO tblUsers (UserName, UserSurname, UserMail, UserPasswd, UserRole, OutstandingFees) VALUES (@UserName, @UserSurname, @UserMail, @UserPasswd, @UserRole, @OutstandingFees)";
+                    comm = new SqlCommand(sql, conn);
+
+                    comm.Parameters.AddWithValue("@UserName", txtLibrarianFirstName.Text);
+                    comm.Parameters.AddWithValue("@UserSurname", txtLibrarianLastName.Text);
+                    comm.Parameters.AddWithValue("@UserMail", txtLibrarianEmail.Text);
+                    comm.Parameters.AddWithValue("@UserPasswd", BCrypt.Net.BCrypt.HashPassword(txtLibrarianPassword.Text.Trim()));
+                    comm.Parameters.AddWithValue("@UserRole", role);
+                    comm.Parameters.AddWithValue("@OutstandingFees", fees);
+
+
+                    int rowsAffected = comm.ExecuteNonQuery();
+                    lblMessage.Text = "User added successfully!";
+                    lblMessage.Visible = true;
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                Showtable(txtUserID.Text.Trim());
+
+                lblMessage.Text = "Successfully added....";
+
+
                 lblMessage.Visible = true;
-                conn.Close();
-
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Showtable();
-
-            lblMessage.Text = "Successfully added....";
-
-
-            lblMessage.Visible = true;
         }
 
         protected void btnRemoveUser_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txtUserIdDel.Text))
+            {
+                return;
+            }
             try
             {
                 conn = new SqlConnection(con_string);
 
                 conn.Open();
 
-                string sql = $"DELETE FROM tblUsers WHERE UserID = '{txtUserIdDel.Text}'";
+                string sql = $"DELETE FROM tblUsers WHERE UserID = @delID";
 
                 comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@delID", txtUserIdDel.Text.Trim());
 
                 adap = new SqlDataAdapter();
 
@@ -153,32 +165,38 @@ namespace Librarian
             {
                 Console.WriteLine(ex.Message);
             }
-            Showtable2();
+            Showtable(txtUserIdDel.Text.Trim());
             lblMessage.Text = "User Seccesfully Deleted!!";
         }
 
         protected void btnUpdateUser_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txtUserID.Text) || string.IsNullOrEmpty(txtUpdate.Text))
+            {
+                return;
+            }
             try
             {
                 conn = new SqlConnection(con_string);
                 conn.Open();
 
-                string columnToUpdate = "";
+                string sql = "";
 
                 // Check which radio button is selected
                 if (radEmail.Checked)
                 {
-                    columnToUpdate = "UserMail";
+                    
+                    sql = "UPDATE tblUsers SET UserMail = @NewValue WHERE UserID = @UserID";
                 }
                 else if (radLast.Checked)
                 {
-                    columnToUpdate = "UserSurname";
+                    
+                    sql = "UPDATE tblUsers SET UserSurname = @NewValue WHERE UserID = @UserID";
                 }
                 else if (radPass.Checked)
                 {
-                    columnToUpdate = "UserPasswd";
+                    
+                    sql = "UPDATE tblUsers SET UserPasswd = @NewValue WHERE UserID = @UserID";
                 }
                 else
                 {
@@ -188,27 +206,31 @@ namespace Librarian
                 }
 
                 // SQL query using string interpolation for simplicity (not best practice but same as your style)
-                string sql = $"UPDATE tblUsers SET {columnToUpdate} = @NewValue WHERE UserID = @UserID";
+                
 
                 comm = new SqlCommand(sql, conn);
 
                 // Add values from textboxes
-                comm.Parameters.AddWithValue("@NewValue", txtUpdate.Text.Trim());
                 comm.Parameters.AddWithValue("@UserID", txtUserID.Text.Trim());
+                comm.Parameters.AddWithValue("@NewValue", radPass.Checked ? BCrypt.Net.BCrypt.HashPassword(txtUpdate.Text.Trim()) : txtUpdate.Text.Trim());
 
                 int rows = comm.ExecuteNonQuery();
 
                 if (rows > 0)
                 {
                     lblMessage.Text = "Successfully updated.";
+                    txtUserID.Text = string.Empty;
+                    txtUpdate.Text = string.Empty;
                 }
                 else
                 {
                     lblMessage.Text = "No user found with that ID.";
+                    txtUserID.Text = string.Empty;
+                    txtUpdate.Text = string.Empty;
                 }
 
                 conn.Close();
-                Showtable2(); // Refresh grid
+                Showtable(txtUserID.Text.Trim()); // Refresh grid
             }
             catch (Exception ex)
             {
@@ -235,8 +257,8 @@ namespace Librarian
                 adap.SelectCommand = comm;
                 adap.Fill(ds);
 
-                GridView2.DataSource = ds;
-                GridView2.DataBind();
+                gvUsers.DataSource = ds;
+                gvUsers.DataBind();
 
                 if (ds.Tables[0].Rows.Count == 0)
                 {
@@ -277,9 +299,8 @@ namespace Librarian
                 orderBy = "UserName DESC";
             }
 
-            Showtable2(orderBy);
+            Showtable(orderBy, gvUsers);
         }
-
 
     }
 }

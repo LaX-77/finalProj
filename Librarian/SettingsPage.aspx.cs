@@ -43,11 +43,10 @@ namespace Librarian
                     string query = @"
                         SELECT 
                             ISBN, 
-                            BookTitle, 
-                            BookAuthor, 
-                            IssueDate, 
+                            BorrowDate, 
                             ReturnDate, 
-                            Status 
+                            Status, 
+                            QRCode
                         FROM tblBorrowed 
                         WHERE UserID = @UserID";
 
