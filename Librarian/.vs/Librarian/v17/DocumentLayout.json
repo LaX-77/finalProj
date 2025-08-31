@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|c:\\users\\moila\\pictures\\library\\librarian\\adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\settingspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +23,16 @@
       "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:settingspage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:studentpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|c:\\users\\moila\\pictures\\library\\librarian\\adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:adminpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\studentpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -51,24 +63,12 @@
       "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:librarianpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\resetpasswordpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:resetpasswordpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|solutionrelative:forgotpasspage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58463064-CEA4-4614-84C0-E6C1FD91570F}|Librarian.csproj|C:\\Users\\moila\\Pictures\\Library\\Librarian\\landingpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -94,17 +94,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "AdminPage.aspx.cs",
               "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\AdminPage.aspx.cs",
               "RelativeDocumentMoniker": "AdminPage.aspx.cs",
               "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\AdminPage.aspx.cs",
               "RelativeToolTip": "AdminPage.aspx.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAAABwBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAswP8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T00:33:29.221Z",
               "IsPinned": true,
@@ -112,13 +112,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AdminPage.aspx",
               "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\AdminPage.aspx",
               "RelativeDocumentMoniker": "AdminPage.aspx",
               "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\AdminPage.aspx",
               "RelativeToolTip": "AdminPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-08-31T10:06:23.403Z",
               "IsPinned": true,
@@ -134,163 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SettingsPage.aspx",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx",
-              "RelativeDocumentMoniker": "SettingsPage.aspx",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx",
-              "RelativeToolTip": "SettingsPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-31T10:01:46.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentPage.aspx",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx",
-              "RelativeDocumentMoniker": "StudentPage.aspx",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx",
-              "RelativeToolTip": "StudentPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-22T01:15:37.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SettingsPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx.cs",
-              "RelativeDocumentMoniker": "SettingsPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx.cs",
-              "RelativeToolTip": "SettingsPage.aspx.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAjwB4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:54:44.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ConfirmSelectionPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx.cs",
-              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx.cs",
-              "RelativeToolTip": "ConfirmSelectionPage.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:26:34.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ConfirmSelectionPage.css",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.css",
-              "RelativeDocumentMoniker": "ConfirmSelectionPage.css",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.css",
-              "RelativeToolTip": "ConfirmSelectionPage.css",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAswG0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-22T01:12:57.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentPage.css",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.css",
-              "RelativeDocumentMoniker": "StudentPage.css",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.css",
-              "RelativeToolTip": "StudentPage.css",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-22T01:49:00.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConfirmSelectionPage.aspx",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx",
-              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx",
-              "RelativeToolTip": "ConfirmSelectionPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-22T01:08:33.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StudentPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx.cs",
-              "RelativeDocumentMoniker": "StudentPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx.cs",
-              "RelativeToolTip": "StudentPage.aspx.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwDUAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T01:21:19.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx.cs",
-              "RelativeDocumentMoniker": "LoginPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx.cs",
-              "RelativeToolTip": "LoginPage.aspx.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAswFsAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T07:09:17.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginPage.aspx",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx",
-              "RelativeDocumentMoniker": "LoginPage.aspx",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx",
-              "RelativeToolTip": "LoginPage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-24T07:07:59.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "librarianPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.aspx.cs",
-              "RelativeDocumentMoniker": "librarianPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.aspx.cs",
-              "RelativeToolTip": "librarianPage.aspx.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAgwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T23:31:50.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "librarianPage.css",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.css",
-              "RelativeDocumentMoniker": "librarianPage.css",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.css",
-              "RelativeToolTip": "librarianPage.css",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-21T23:29:11.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "librarianPage.aspx",
               "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.aspx",
               "RelativeDocumentMoniker": "librarianPage.aspx",
@@ -303,7 +147,176 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "librarianPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.aspx.cs",
+              "RelativeDocumentMoniker": "librarianPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.aspx.cs",
+              "RelativeToolTip": "librarianPage.aspx.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAqwFYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T23:31:50.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ForgotPassPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ForgotPassPage.aspx.cs",
+              "RelativeDocumentMoniker": "ForgotPassPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ForgotPassPage.aspx.cs",
+              "RelativeToolTip": "ForgotPassPage.aspx.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAA7wAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:17:19.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx.cs",
+              "RelativeDocumentMoniker": "SettingsPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx.cs",
+              "RelativeToolTip": "SettingsPage.aspx.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAjwKIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:54:44.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SettingsPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx",
+              "RelativeDocumentMoniker": "SettingsPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\SettingsPage.aspx",
+              "RelativeToolTip": "SettingsPage.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-31T10:01:46.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx",
+              "RelativeDocumentMoniker": "StudentPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx",
+              "RelativeToolTip": "StudentPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T01:15:37.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConfirmSelectionPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx.cs",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx.cs",
+              "RelativeToolTip": "ConfirmSelectionPage.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:26:34.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfirmSelectionPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.css",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.css",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.css",
+              "RelativeToolTip": "ConfirmSelectionPage.css",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswG0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T01:12:57.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.css",
+              "RelativeDocumentMoniker": "StudentPage.css",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.css",
+              "RelativeToolTip": "StudentPage.css",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-22T01:49:00.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfirmSelectionPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx",
+              "RelativeDocumentMoniker": "ConfirmSelectionPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ConfirmSelectionPage.aspx",
+              "RelativeToolTip": "ConfirmSelectionPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T01:08:33.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx.cs",
+              "RelativeDocumentMoniker": "StudentPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\StudentPage.aspx.cs",
+              "RelativeToolTip": "StudentPage.aspx.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwDUAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:21:19.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginPage.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx.cs",
+              "RelativeDocumentMoniker": "LoginPage.aspx.cs",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx.cs",
+              "RelativeToolTip": "LoginPage.aspx.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAswFsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:09:17.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginPage.aspx",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx",
+              "RelativeDocumentMoniker": "LoginPage.aspx",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\LoginPage.aspx",
+              "RelativeToolTip": "LoginPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-24T07:07:59.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "librarianPage.css",
+              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.css",
+              "RelativeDocumentMoniker": "librarianPage.css",
+              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\librarianPage.css",
+              "RelativeToolTip": "librarianPage.css",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-21T23:29:11.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ResetPasswordPage.aspx.cs",
               "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ResetPasswordPage.aspx.cs",
               "RelativeDocumentMoniker": "ResetPasswordPage.aspx.cs",
@@ -312,19 +325,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-24T07:00:45.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ForgotPassPage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ForgotPassPage.aspx.cs",
-              "RelativeDocumentMoniker": "ForgotPassPage.aspx.cs",
-              "ToolTip": "C:\\Users\\moila\\Pictures\\Library\\Librarian\\ForgotPassPage.aspx.cs",
-              "RelativeToolTip": "ForgotPassPage.aspx.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T07:17:19.238Z",
               "EditorCaption": ""
             },
             {

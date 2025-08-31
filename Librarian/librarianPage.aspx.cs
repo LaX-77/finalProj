@@ -79,26 +79,14 @@ namespace Librarian
             {
                 gvBooks.DataSource = null;
                 gvBooks.DataBind();
-                //lstShow.DataSource = null;
-                //lstShow.DataBind();
-                //lblHeadings.Text = ""; // Clear headings
+            
                 return;
             }
             
 
-                DataTable results = SearchBooks(query); // Your method to fetch filtered data
+            DataTable results = SearchBooks(query); // Your method to fetch filtered data
 
-            // Add a new column to the DataTable for formatted display
-            //results.Columns.Add("FormattedText", typeof(string));
-            //foreach (DataRow row in results.Rows)
-            //{
-            //    // Format the text to align columns (adjust spacing as needed)
-            //    row["FormattedText"] = $"{row["ISBN"],-10}    | {row["BookTitle"],-30} by {row["BookAuthor"],-20} {row["Year"],-4}, EDITION: {row["BookEdition"],-11}";
-            //}
-
-
-
-            // Bind to ListBox
+           
             gvBooks.DataSource = results;
             gvBooks.DataBind();
 

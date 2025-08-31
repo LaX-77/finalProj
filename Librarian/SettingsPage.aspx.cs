@@ -1,8 +1,9 @@
 using System;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Librarian
 {
@@ -90,6 +91,81 @@ namespace Librarian
             Response.Redirect("ResetPasswordPage.aspx");
         }
 
+        protected Boolean CheckDelete(string uID)
+        {
+            int borrowedCount = 0;
+            // Check if user has borrowed books
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string checkQuery = "SELECT COUNT(*) FROM tblBorrowed WHERE UserID = @UserID AND Status = 'Borrowed'";
+                    
+                    using (SqlCommand cmd = new SqlCommand(checkQuery, con))
+                    {
+                        cmd.Parameters.AddWithValue("@UserID", uID);
+                        borrowedCount = (int)cmd.ExecuteScalar();
+                    }
+     
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "⚠️ Error checking borrowed books: " + ex.Message;
+                return false;
+            }
+
+            if (borrowedCount > 0)
+            {
+                lblMessage.Text = "❌ You cannot delete your account while you have borrowed books. Please return them first.";
+
+                return false;
+            }
+            else
+            {
+
+
+                // Check if user has outstandingfees > 0
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        con.Open();
+                        string feeQuery = "SELECT OutstandingFees FROM tblUsers WHERE UserID = @UserID";
+                        using (SqlCommand cmd = new SqlCommand(feeQuery, con))
+                        {
+                            cmd.Parameters.AddWithValue("@UserID", uID); //maybe make uID int
+                            object result = cmd.ExecuteScalar();
+                            if (result != null && decimal.TryParse(result.ToString(), out decimal fees))
+                            {
+                                if (fees > 0)
+                                {
+                                    lblMessage.Text = "❌ You cannot delete your account while you have outstanding fees. Please clear them first.";
+                                    return false;
+                                }
+                                else
+                                {
+                                    return true;
+                                }
+                            }
+                            else
+                            {
+                                lblMessage.Text = "❌ User not found";
+                                return false;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblMessage.Text = "⚠️ Error checking outstanding fees: " + ex.Message;
+                    return false;
+                }
+            }
+
+        }
+
         //  Delete account with confirmation 
         protected void btnDeleteAccount_Click(object sender, EventArgs e)
         {
@@ -99,6 +175,10 @@ namespace Librarian
                 return;
             }
 
+            if (!CheckDelete(Session["UserID"].ToString()))
+            {
+                return;
+            }
             try
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
